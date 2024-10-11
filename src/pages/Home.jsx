@@ -9,7 +9,7 @@ export default function Home() {
         <>
             {/* Main content section */}
             <div className='px-4 sm:px-24'>
-                <div className="pt-24 flex justify-between items-center px-4 py-6">
+                <div className="pt-24 flex justify-between items-center px-4 py-6" id="home">
                     <h2 className="text-xl sm:text-2xl font-semibold">Welcome home, KanakBPandey!</h2>
                     <button className="flex items-center space-x-1 text-gray-400 hover:text-white">
                         <span className="material-icons">tune</span>
@@ -24,18 +24,15 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Thriller section */}
             <div className="px-4 sm:px-24 bg-[#1A1A1A] pt-16">
                 <h2 className="text-left text-2xl sm:text-4xl ml-4 sm:ml-11">Because you like thriller</h2>
                 <p className="text-left text-lg sm:text-2xl ml-4 sm:ml-12">Based on your favorite genres</p>
 
                 <div className="ml-4 sm:ml-10 mr-4 sm:mr-10 p-4 flex flex-col sm:flex-row gap-6 items-start">
-                    {/* Image Section */}
+                    
                     <div className="w-full sm:w-[340px] h-[300px] bg-gray-200">
                         <img src={car} alt="" className="w-full h-full object-cover" />
                     </div>
-
-                    {/* Text and Details Section */}
                     <div className="flex flex-col">
                         <h2 className="text-2xl sm:text-3xl font-bold mb-2">Re:Cursed</h2>
                         <p className="text-white leading-relaxed mb-4">
@@ -64,7 +61,7 @@ export default function Home() {
                 <p className="text-left text-lg sm:text-2xl ml-4 sm:ml-12">Based on your favorite genres</p>
                 <CardCarousel />
             </div>
-            <div className="bg-[#1A1A1A] px-4 sm:px-24 flex flex-col">
+            <div className="bg-[#1A1A1A] px-4 sm:px-24 flex flex-col" id='trending'>
                 <h2 className="text-left text-2xl sm:text-4xl ml-4 sm:ml-11 font-bold mt-24 mb-8">Top 10 in India</h2>
                 <VerticalCardCarousel />
 
@@ -72,7 +69,7 @@ export default function Home() {
                 <p className="text-left text-lg sm:text-2xl ml-4 sm:ml-12 mt-4">Threaded Tales HQ's handpicked favorites</p>
                 <VerticalCardCarousel />
             </div>
-            <div className="px-4 sm:px-24 pt-16">
+            <div className="px-4 sm:px-24 pt-16" id='themes'>
                 <h2 className="text-left text-2xl sm:text-4xl ml-4 sm:ml-11">Instant Threaded Tales Clasics</h2>
                 <p className="text-left text-lg sm:text-2xl ml-4 sm:ml-12">Check out these fan favourites</p>
 

@@ -59,14 +59,13 @@ const NestedComment = ({
     };
 
     return (
-        <div className="nested-comment relative mb-4"> {/* Added mb-4 for margin */}
-            {/* Left line indicator */}
+        <div className="nested-comment relative mb-4">
             {comment.id !== 1 && (
                 <div
                     className="absolute left-0 w-1 bg-white"
                     style={{
-                        top: "10px", // Adjust to position vertically as needed
-                        height: "calc(100% - 20px)", // Dynamic height
+                        top: "10px", 
+                        height: "calc(100% - 20px)",
                     }}
                 ></div>
             )}
@@ -74,7 +73,7 @@ const NestedComment = ({
                 className={`flex flex-col items-start mt-1 p-2 rounded-md bg-[#1A1A1A] border-2 border-red-500 w-full max-w-[700px]`}
                 style={{
                     borderImage: "linear-gradient(45deg, red, red) 1",
-                    marginBottom: "20px", // Add margin to create distance between boxes
+                    marginBottom: "20px",
                 }}
             >
                 {comment.id === 1 ? (
@@ -96,8 +95,8 @@ const NestedComment = ({
                             }}
                         />
                         <Action
-                            className="ml-2 bg-blue-500 text-white rounded-md p-1 w-24"
-                            type="COMMENT"
+                            className="ml-2 bg-blue-500 text-white rounded-md p-1 w-24 text-center"
+                            type="POST"
                             handleClick={onAddComment}
                         />
                     </>
@@ -139,7 +138,7 @@ const NestedComment = ({
                             ) : (
                                 <>
                                     <Action
-                                        className="flex items-center text-blue-500"
+                                        className="flex items-center text-blue-500 mr-4"
                                         type={
                                             <>
                                                 <img
@@ -154,7 +153,7 @@ const NestedComment = ({
                                         handleClick={handleNewComment}
                                     />
                                     <Action
-                                        className="text-blue-500"
+                                        className="text-blue-500 mr-4"
                                         type="EDIT"
                                         handleClick={() => {
                                             setEditMode(true);

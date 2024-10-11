@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import cat from '../assets/walk.png';
 import nature from "../assets/nature.png";
 import mystery from "../assets/mystery.jpg";
 import { Carousel } from 'primereact/carousel';
 
 const CardCarousel = () => {
-    // Cards data with image URLs
+    // Cards data with image URLs and paths
     const cards = [
-        { title: 'Card 1', description: 'This is Card 1', image: cat },
-        { title: 'Card 2', description: 'This is Card 2', image: nature },
-        { title: 'Card 3', description: 'This is Card 3', image: mystery },
-        { title: 'Card 4', description: 'This is Card 4', image: cat },
-        { title: 'Card 5', description: 'This is Card 5', image: cat },
+        { title: 'Tale 1', description: 'This is Tale 1', image: cat, path: '/comment' },
+        { title: 'Tale 2', description: 'This is Tale 2', image: nature, path: '/comment' },
+        { title: 'Tale 3', description: 'This is Tale 3', image: mystery, path: '/comment' },
+        { title: 'Tale 4', description: 'This is Tale 4', image: cat, path: '/comment' },
+        { title: 'Tale 5', description: 'This is Tale 5', image: cat, path: '/comment' },
     ];
-
+    
     // Template for each card
     const cardTemplate = (card) => {
         return (
-            <div className="p-4">
-                <div className="border-round shadow-2 p-4" style={{ backgroundColor: '#fafafa' }}>
+            <Link to={card.path} className="p-4"> {/* Wrap card in Link */}
+                <div className="border-round shadow-2 p-4 ml-8" style={{ backgroundColor: '#fafafa' }}>
                     {/* Display Image */}
                     <img src={card.image} alt={card.title} className="w-full h-48 object-cover mb-3" />
                     
@@ -26,7 +27,7 @@ const CardCarousel = () => {
                     <h3 className='text-black'>{card.title}</h3>
                     <p className='text-black'>{card.description}</p>
                 </div>
-            </div>
+            </Link>
         );
     };
 
@@ -51,8 +52,6 @@ const CardCarousel = () => {
     return (
         <div className="card">
             {/* Dynamic Title and Subtitle */}
-            
-            
             <Carousel
                 value={cards}
                 itemTemplate={cardTemplate}
