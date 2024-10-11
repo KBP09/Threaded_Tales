@@ -20,7 +20,7 @@ const App = () => {
       <Router>
         <NavbarWrapper /> {/* Use a wrapper component to access context */}
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/comment" element={<Commentpage />} />
           <Route path="/profile" element={<ProfilePage />} />
