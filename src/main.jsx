@@ -12,7 +12,7 @@ function Main() {
       domain="dev-t8noyagy1ozp2ndx.us.auth0.com"
       clientId="uhZrNIcAia0fl4BF6MNus0F2yVMNYnL3"
       authorizationParams={{
-        redirect_uri: window.location.origin // This ensures that after login, users are redirected to /home
+        redirect_uri: 'https://threaded-tales.vercel.app/callback'
       }}
     >
       <App userProfilePic={userProfilePic} setUserProfilePic={setUserProfilePic} />
